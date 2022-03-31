@@ -1,6 +1,6 @@
 .modal-checkout {
   .modal-dialog {
-    width: 790px !important;
+    width: fit-content !important;
     max-width: 790px !important;
 
     .modal-content {
@@ -11,6 +11,15 @@
       .modal-header,
       .modal-body {
         background: none !important;
+        border: 0 !important;
+      }
+
+      .modal-body {
+        & > .row {
+          @include responsive(991px) {
+            gap: 10px;
+          }
+        }
       }
     }
   }

@@ -18,12 +18,16 @@ const Home = () => {
 
   return (
     <>
-      <ModalDetails
-        show={isShowModalDetails}
-        handleShowModalCheckout={handleShowModalCheckout}
-      />
+      {isShowModalDetails && (
+        <ModalDetails
+          show={isShowModalDetails}
+          handleShowModalCheckout={handleShowModalCheckout}
+        />
+      )}
 
-      <ModalCheckout show={isShowModalCheckout} handleBack={handleBack} />
+      {isShowModalCheckout && (
+        <ModalCheckout show={isShowModalCheckout} handleBack={handleBack} />
+      )}
     </>
   );
 };

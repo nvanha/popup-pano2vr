@@ -4,3 +4,9 @@
   justify-content: $justify;
   flex-wrap: $wrap;
 }
+
+@mixin responsive($width-device) {
+  @media only screen and (max-width: $width-device) {
+    @content;
+  }
+}
