@@ -1,0 +1,42 @@
+.btn-custom {
+  outline: none !important;
+  border: 0 !important;
+  cursor: pointer;
+  padding: 10px;
+  min-height: 40px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: none !important;
+
+  &.w-100 {
+    width: 100%;
+  }
+
+  @include flex(center, center);
+  flex-direction: column;
+  // gap: 10px;
+
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px #00000061;
+
+  span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.primary {
+    background-color: var(--color-btn-bg-primary);
+    color: (--color-btn-text-primary);
+  }
+
+  &.secondary {
+    background-color: var(--color-btn-bg-secondary);
+    color: var(--color-btn-text-secondary);
+    text-shadow: none;
+  }
+}
