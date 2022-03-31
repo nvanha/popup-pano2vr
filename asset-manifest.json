@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/popup-pano2vr/static/css/main.d0a7aaa5.css",
-    "main.js": "/popup-pano2vr/static/js/main.2b5a69b5.js",
+    "main.css": "/popup-pano2vr/static/css/main.c0dc3d5f.css",
+    "main.js": "/popup-pano2vr/static/js/main.d0dfc3be.js",
     "static/media/mo-gia-toc.jpeg": "/popup-pano2vr/static/media/mo-gia-toc.2d774f89065f521e1c95.jpeg",
     "index.html": "/popup-pano2vr/index.html",
     "static/media/arrow-back.svg": "/popup-pano2vr/static/media/arrow-back.18544a4c2472afa4b402c76bcfe25626.svg",
-    "main.d0a7aaa5.css.map": "/popup-pano2vr/static/css/main.d0a7aaa5.css.map",
-    "main.2b5a69b5.js.map": "/popup-pano2vr/static/js/main.2b5a69b5.js.map"
+    "main.c0dc3d5f.css.map": "/popup-pano2vr/static/css/main.c0dc3d5f.css.map",
+    "main.d0dfc3be.js.map": "/popup-pano2vr/static/js/main.d0dfc3be.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0a7aaa5.css",
-    "static/js/main.2b5a69b5.js"
+    "static/css/main.c0dc3d5f.css",
+    "static/js/main.d0dfc3be.js"
   ]
 }
