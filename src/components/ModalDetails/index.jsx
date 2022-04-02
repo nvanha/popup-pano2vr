@@ -1,10 +1,27 @@
 import imageTmp from "assets/images/mo-gia-toc.jpeg";
 import ButtonCustom from "components/ButtonCustom";
 import Helmet from "components/Helmet";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Modal, Row } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { getDetailByHomeId } from "services/firebase";
 
 const ModalDetails = ({ show, handleShowModalCheckout }) => {
+  const [homeDetail, setHomeDetail] = useState([]);
+
+  const { demoId } = useParams();
+
+  useEffect(() => {
+    async function demo() {
+      const detail = await getDetailByHomeId(demoId);
+      setHomeDetail(detail);
+    }
+
+    demo();
+  }, [demoId]);
+
+  console.log("homeDetail", homeDetail);
+
   return (
     <Helmet title="Detail">
       <Modal
@@ -18,7 +35,12 @@ const ModalDetails = ({ show, handleShowModalCheckout }) => {
           <Modal.Title>Chi tiết dự án</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Row className="modal-details--row-1">
+          <h1>
+            {homeDetail[0]?.homeName
+              ? homeDetail[0]?.homeName
+              : "Không tìm thấy dữ liệu"}
+          </h1>
+          {/* <Row className="modal-details--row-1">
             <Col>
               <Row>
                 <Col>
@@ -100,7 +122,7 @@ const ModalDetails = ({ show, handleShowModalCheckout }) => {
                 LIÊN HỆ
               </ButtonCustom>
             </Col>
-          </Row>
+          </Row> */}
         </Modal.Body>
       </Modal>
     </Helmet>
